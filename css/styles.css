@@ -307,7 +307,6 @@ body {
 .filter-list-item {
   margin: 15px;
   background: var(--tertiary-text-color);
-  border: 1px solid #eeeeee;
 }
 .btn-filter {
   cursor: pointer;
@@ -329,6 +328,7 @@ body {
 .title-under-img {
   width: 370px;
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .btn-filter-list:not(:last-child) {
