@@ -67,8 +67,8 @@ body {
 .header {
   border-bottom: 1px solid #ececec;
 }
-.nav-list-item,
-.nav-list-contact {
+.nav-link,
+.nav-link-contact {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -145,8 +145,9 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--tertiary-text-color);
-  margin-bottom: 30px;
   text-align: center;
+  max-width: 696px;
+  margin: 0 auto 30px;
 }
 .btn-order-service {
   font-weight: 700;
@@ -200,6 +201,18 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ==== enв section description ==== */
 
 /* ==== begin section we-are-doing ==== */
@@ -214,8 +227,14 @@ body {
 }
 .we-are-doing-list {
   display: flex;
-  justify-content: space-around;
 }
+.we-are-doing-item {
+  width: calc((100% / 3)-30px);
+}
+.we-are-doing-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
 /* ==== end section we-are-doing ==== */
 
 /* ==== begin section our-team ==== */
@@ -229,6 +248,7 @@ body {
   background-color: var(--background-secondary);
 }
 .member-team {
+  width: calc((100% / 4)-30px);
   margin-left: 30px;
   margin-top: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -237,10 +257,8 @@ body {
   background-color: var(--tertiary-text-color);
 }
 .member-team-card {
+  padding-top: 30px;
   padding-bottom: 30px;
-}
-.foto-member-team {
-  margin-bottom: 30px;
 }
 
 .name-member-team {
@@ -307,6 +325,7 @@ body {
 .filter-list-item {
   margin: 15px;
   background: var(--tertiary-text-color);
+  width: calc(100% / 3)-30px;
 }
 .btn-filter {
   cursor: pointer;
@@ -326,9 +345,10 @@ body {
   display: block;
 }
 .title-under-img {
-  width: 370px;
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .btn-filter-list:not(:last-child) {
